@@ -1,0 +1,17 @@
+
+<h1>Bienvenue au supermarché "{{nomSupermarket}}"</h1>
+
+
+        
+
+
+
+<div  [ngClass]="'row'">
+  <ng-container *ngFor="let t of lesCategories;index as i ">
+  <div [ngClass]="'col'">
+      <img [ngClass]="{'c1':i==0,'c2':i==1,'c3':i==2,'c4':i==3,'rounded-circle':i==i}"[src]="lesCategories[i].image">
+      <p [ngClass]="{'c11':i==0,'c22':i==1,'c33':i==2,'c44':i==3,'badge badge-dark badge-pill ':i==i}" >{{lesCategories[i].nom|uppercase}}</p>
+  </div>
+  <div class="w-100"></div>
+  </ng-container>
+      </div>
