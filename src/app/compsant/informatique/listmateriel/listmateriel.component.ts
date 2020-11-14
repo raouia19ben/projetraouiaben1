@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listmateriel.component.css']
 })
 export class ListmaterielComponent implements OnInit {
+  cd:string="circle";
   materiels=[
     {   
         id: '1',

@@ -1,7 +1,8 @@
-img{width: 60px;height: 60px;}
-ul{list-style-type: georgian;position: relative;top:650px;}
-li{display:flex;}
-h1{position: relative;top:320px}
+img{width: 80px;height: 70px;}
+ul{list-style-type:disc;}
 ul{position: relative;top:320px}
-span{width:135px;height:20px;position: relative;top:20px;left:50px}
-.c{position:relative;;top:18px;left:35px}
+h1{position: relative;top:320px}
+li{position:relative;top:20px}
+
+span{width:135px;height:20px;position: relative;top:-80px;left:180px}
+.c{position:relative;;top:-35px;left:90px}
