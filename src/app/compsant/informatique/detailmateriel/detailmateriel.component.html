@@ -1,1 +1,15 @@
+<h1>Détail du "{{materiel.libelle}} d'Id:{{materiel.id}}"</h1>
+<ul class="list-group">
+<li class="list-group-item">
+    <img [src]="materiel.photo">
+   
+</li>
+<li class="list-group-item"> Marque:{{materiel.marque}}</li>
+<li class="list-group-item"> Description:{{materiel.description}}</li>
+
+<li class="list-group-item"> Quantite:{{materiel.quantite}}</li>
+<li class="list-group-item"><input type="checkbox" [checked]="materiel.hautGamme">Haut de Gamme</li>
+<li class="list-group-item"><button class="btn btn-primary">afficher les commentaires</button></li>
+
+</ul>
 
