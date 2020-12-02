@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Materiel } from 'src/app/models/materiel';
 
 @Component({
   selector: 'rao-listmateriel',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListmaterielComponent implements OnInit {
   cd:string="circle";
-  materiels=[
+  materiels:Materiel[]=[
     {   
         id: '1',
         libelle: 'Ecran',

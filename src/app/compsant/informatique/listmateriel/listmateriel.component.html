@@ -1,18 +1,9 @@
 <h1>Nos produit en informatique</h1>
 <ul>
     <ng-container *ngFor="let t of materiels;index as i ">
-    <li *ngIf="materiels[i].quantite>0">
-        <img [src]="materiels[i].photo">
-        <p [ngClass]="'c'"> {{materiels[i].libelle|titlecase}}</p>
-    
-    <span [ngClass]="{'badge badge-primary ':materiels[i].hautGamme==true,'badge badge-dark':materiels[i].hautGamme==false,'badge-pill':materiels[i].hautGamme==true||materiels[i].hautGamme==false}">
-        
-        
-        
-    Prix: {{materiels[i].prix}} DT 
-<p [ngClass]="{' fa fa-thumbs-up de font-awesome':materiels[i].hautGamme==true}"></p>
+    <li *ngIf="t.quantite>0">
 
-</span>
+ <rao-materiel [m]="t"></rao-materiel>
     </li>
     </ng-container>
    </ul>
