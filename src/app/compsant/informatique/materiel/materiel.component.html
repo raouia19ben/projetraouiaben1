@@ -1,11 +1,22 @@
-<img [src]="m.photo">
-<p [ngClass]="'c'"> {{m.libelle|titlecase}}</p>
 
-<span [ngClass]="{'badge badge-primary ':m.hautGamme==true,'badge badge-dark':m.hautGamme==false,'badge-pill':m.hautGamme==true||m.hautGamme==false}">
+<div class="card text-center">
+    <div class="card-header ">
+        <p> {{m.libelle|titlecase}}</p>
+    </div>
+    <div class="card-body">
+        <img [src]="m.photo">
 
-
-
-Prix: {{m.prix}} DT 
-<p [ngClass]="{' fa fa-thumbs-up de font-awesome':m.hautGamme==true}"></p>
-
-</span>
+<br>
+        <span [ngClass]="{'badge badge-primary ':m.hautGamme==true,'badge badge-dark':m.hautGamme==false,'badge-pill':m.hautGamme==true||m.hautGamme==false}">
+        
+        
+        
+        Prix: {{m.prix}} DT 
+        <p [ngClass]="{' fa fa-thumbs-up de font-awesome':m.hautGamme==true}"></p>
+        
+        </span>
+    </div>
+    <div class="card-footer text-muted">
+  <span class="badge badge-primary">Détails</span>
+    </div>
+</div>
