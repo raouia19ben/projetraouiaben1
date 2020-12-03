@@ -6,6 +6,9 @@ import { Materiel } from 'src/app/models/materiel';
   styleUrls: ['./detailmateriel.component.css']
 })
 export class DetailmaterielComponent implements OnInit {
+  variable:boolean=false;
+  res(variable:boolean)
+  {this.variable=true;}
   materiel:Materiel ={
     id: '2',
     libelle: 'PC',
