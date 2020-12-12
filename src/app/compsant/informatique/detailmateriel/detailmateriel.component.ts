@@ -1,5 +1,7 @@
+import { fn } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Materiel } from 'src/app/models/materiel';
+import { MaterielService } from 'src/app/services/materiel.service';
 @Component({
   selector: 'rao-detailmateriel',
   templateUrl: './detailmateriel.component.html',
@@ -9,23 +11,13 @@ export class DetailmaterielComponent implements OnInit {
   variable:boolean=false;
   res(variable:boolean)
   {this.variable=true;}
-  materiel:Materiel ={
-    id: '2',
-    libelle: 'PC',
-    photo:'assets/Images/Informatique/pcFixe.jpg',
-    marque: 'HP',
-    prix: 1780.6,
-    description: 'PC Portable très pratique',
-    hautGamme: false,
-    quantite: 5,
-    commentaires:[
-   {contenu:' satisfaisant', note:3, auteur:'Sami MRAD', date:new Date(2020,11,4)},
-   {contenu:'Bon rapport qualité prix', note:4, auteur:'Samar Salah', date:new Date(
-   2020,10,4)}]
-   };
-  constructor() { }
+  materiel:Materiel[];
+  constructor(private materielservice:MaterielService) { }
 
   ngOnInit(): void {
+    this.materiel=this.materielservice.getMaterielById('2');
   }
+ 
 
+ 
 }

@@ -1,20 +1,22 @@
-
+<ng-container *ngFor="let t of materiel;index as i ">
+    
+    
 <div class="row">
     <div class="col-md-4 mr-auto">
    
   
 
-<h1>Détail du "{{materiel.libelle}} d'Id:{{materiel.id}}"</h1>
+<h1>Détail du "{{t.libelle}} d'Id:{{t.id}}"</h1>
 <ul class="list-group">
 <li class="list-group-item">
-    <img [src]="materiel.photo">
+    <img [src]="t.photo">
    
 </li>
-<li class="list-group-item"> Marque:{{materiel.marque}}</li>
-<li class="list-group-item"> Description:{{materiel.description}}</li>
+<li class="list-group-item"> Marque:{{t.marque}}</li>
+<li class="list-group-item"> Description:{{t.description}}</li>
 
-<li class="list-group-item"> Quantite:{{materiel.quantite}}</li>
-<li class="list-group-item"><input type="checkbox" [checked]="materiel.hautGamme">Haut de Gamme</li>
+<li class="list-group-item"> Quantite:{{t.quantite}}</li>
+<li class="list-group-item"><input type="checkbox" [checked]="t.hautGamme">Haut de Gamme</li>
 <li class="list-group-item"><button class="btn btn-primary "(click)="res(variable)" >afficher les commentaires</button></li>
 
 </ul>
@@ -22,14 +24,15 @@
 
 
 </div>
+
 <div *ngIf="variable">
 <h2>liste des commentaires</h2>
 
-    <ng-container *ngFor="let t of materiel.commentaires;index as i ">
+    <ng-container *ngFor="let z of t.commentaires;index as i ">
     
-    <rao-comment [x]="t" [j]="i"></rao-comment>
+    <rao-comment [x]="z" [j]="i"></rao-comment>
      
-    
     </ng-container>
     
     </div>
+</ng-container>
